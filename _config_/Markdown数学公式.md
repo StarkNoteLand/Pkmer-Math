@@ -29,6 +29,8 @@ author:
 5. 上大括号, 符号: `\overbrace{算式}`, 如: $\overbrace{a+b+c+d}^{2.0}$
 6. 下大括号, 符号: `\underbrace{算式}`, 如: $a+\underbrace{b+c}_{1.0}+d$
 7. 上位符号, 符号: `\stacrel{上位符号}{基位符号}`, 如: $\vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n}$
+8. 自适应条件等号 $\xlongequal{L'H}$ `\xlongequal{L'H}`
+
 
 ## 占位符
 1. 两个quad空格, 符号: `\qquad`, 如: $x \qquad y$
@@ -189,8 +191,10 @@ $$
 17. 实数集合, 符号: `\mathbb{R}`, 如: `\mathbb{R}`
 18. 自然数集合, 符号: `\mathbb{Z}`, 如: `\mathbb{Z}`
 19. 空集, 符号: `\emptyset`, 如: $\emptyset$
-20. 任意: `forall` $\forall$
-21. 存在: `exists` $\exists$
+20. 任意: `\forall` $\forall$
+21. 存在: `\exists` $\exists$
+22. $\land$ `\land`
+23. $\vee$ `\vee`
 
 ## 数学符号
 
@@ -232,8 +236,7 @@ x \pmod a
 $$
 
 ## 累积
-$$\sum_{i=1}^{k}$$
-$$\displaystyle\sum_{i=1}^n$$
+$\sum_{i=1}^{k}$, $\displaystyle\sum_{i=1}^n$
 $$\textstyle\sum_{i=1}^n$$
 
 ## 累乘
@@ -250,32 +253,32 @@ $$\lim\nolimits_{k \to \infty}$$
 
 ## 希腊字母
 
-|字母|实现|字母|实现|
-|-|-|-|-|
-|A|`A`|α|`\alhpa`|
-|B|`B`|β|`\beta`|
-|Γ|`\Gamma`|γ|`\gamma`|
-|Δ|`\Delta`|δ|`\delta`|
-|E|`E`|ϵ|`\epsilon`|
-|Z|`Z`|ζ|`\zeta`|
-|H|`H`|η|`\eta`|
-|Θ|`\Theta`|θ|`\theta`|
-|I|`I`|ι|`\iota`|
-|K|`K`|κ|`\kappa`|
-|Λ|`\Lambda`|λ|`\lambda`|
-|M|`M`|μ|`\mu`|
-|N|`N`|ν|`\nu`|
-|Ξ|`\Xi`|ξ|`\xi`|
-|O|`O`|ο|`\omicron`|
-|Π|`\Pi`|π|`\pi`|
-|P|`P`|ρ|`\rho`|
-|Σ|`\Sigma`|σ|`\sigma`|
-|T|`T`|τ|`\tau`|
-|Υ|`\Upsilon`|υ|`\upsilon`|
-|Φ|`\Phi`|ϕ|`\phi`|
-|X|`X`|χ|`\chi`|
-|Ψ|`\Psi`|ψ|`\psi`|
-|Ω|`\v`|ω|`\omega`|
+| 字母  | 实现         | 字母  | 实现         |               |               |
+| --- | ---------- | --- | ---------- | ------------- | ------------- |
+| A   | `A`        | α   | `\alhpa`   |               |               |
+| B   | `B`        | β   | `\beta`    |               |               |
+| Γ   | `\Gamma`   | γ   | `\gamma`   |               |               |
+| Δ   | `\Delta`   | δ   | `\delta`   |               |               |
+| E   | `E`        | ϵ   | `\epsilon` | $\varepsilon$ | `\varepsilon` |
+| Z   | `Z`        | ζ   | `\zeta`    |               |               |
+| H   | `H`        | η   | `\eta`     |               |               |
+| Θ   | `\Theta`   | θ   | `\theta`   | $\vartheta$   | `\vartheta`   |
+| I   | `I`        | ι   | `\iota`    |               |               |
+| K   | `K`        | κ   | `\kappa`   | $\varkappa$   | `\varkappa`   |
+| Λ   | `\Lambda`  | λ   | `\lambda`  |               |               |
+| M   | `M`        | μ   | `\mu`      |               |               |
+| N   | `N`        | ν   | `\nu`      |               |               |
+| Ξ   | `\Xi`      | ξ   | `\xi`      |               |               |
+| O   | `O`        | ο   | `\omicron` |               |               |
+| Π   | `\Pi`      | π   | `\pi`      | $\varpi$      | `\varpi`      |
+| P   | `P`        | ρ   | `\rho`     | $\varrho$     | `\varrho`     |
+| Σ   | `\Sigma`   | σ   | `\sigma`   | $\varsigma$   | `\varsigma`   |
+| T   | `T`        | τ   | `\tau`     |               |               |
+| Υ   | `\Upsilon` | υ   | `\upsilon` |               |               |
+| Φ   | `\Phi`     | ϕ   | `\phi`     | $\varphi$     | `\varphi`     |
+| X   | `X`        | χ   | `\chi`     |               |               |
+| Ψ   | `\Psi`     | ψ   | `\psi`     |               |               |
+| Ω   | `\v`       | ω   | `\omega`   |               |               |
 
 ## 修饰线
 
@@ -302,6 +305,11 @@ $$\lim\nolimits_{k \to \infty}$$
 
 ---
 # 二、修饰符号
+
+$A\underset{\text{下标条件}}{\overset{\text{上标条件}}{\sim}}B$
+```
+A\underset{\text{下标条件}}{\overset{\text{上标条件}}{\sim}}B
+``` 
 
 ## 1\. 简单的帽子
 $\hat{\theta}$ $\widehat{AB}$ 
@@ -447,6 +455,28 @@ $$
 | $\ulcorner \urcorner$ | \ulcorner  \urcorner |
 | $\llcorner \lrcorner$ | \llcorner  \lrcorner |
 
+## 矩阵分割线
+水平分割线
+$$
+\begin{matrix}
+1 & 2 & 3 \\
+\hline
+4 & 5 & 6 \\
+\hline
+7 & 8 & 9 \\
+\end{matrix}
+$$
+垂直分割线
+$$
+\left(\begin{array}{c|c|c}
+1 & 2 & 3 \\
+\hline
+4 & 5 & 6 \\
+\hline
+7 & 8 & 9 \\
+\end{array}\right)
+$$
+
 ---
 # 三、箭头
 ### 箭头符号
@@ -526,6 +556,8 @@ $$
 | ⇄ | \rightleftarrows |
 | ⇌ | \rightleftharpoons |
 | ⇋ | \leftrightharpoons |
+
+
 
 ---
 # 四、ArcherReilly
