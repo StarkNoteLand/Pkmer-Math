@@ -1,0 +1,17 @@
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/gitnote.iml
+/.obsidian/workspace.json
+/.obsidian/plugins/obsidian_demo/
+/.obsidian/plugins/obsidian-vue-demo/
+/.idea
+#homepage 变化较大从版本跟踪中去掉
+/Home/Home.excalidraw.md
+/Home/Muyao-Softbrush-2.ttf
+/Home/
+/.obsidian/plugins/obsidian-sample-plugin/
+/.obsidian/plugins/ob-plugin-demo/
+/z-loacl/
+/z-local/
